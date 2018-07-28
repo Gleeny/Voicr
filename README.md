@@ -44,6 +44,14 @@ If you're super pecky about giving bots permissions, read this:
 If you want to, you can make these permissions only work in the counting channel. 
 
 ** **
+<big>Contributors</big>
+
+- `Main Developer and Designer` Promise - Gleeny (110090225929191424)
+- `Helper and Beta Tester` GamesForDays (332209233577771008)
+
+Since we can change our names on Discord whenever we want, you can find us on the [support server](https://discord.gg/JbHX5U3).
+
+** **
 <big>Vote for us</big>
 
 To support us free, please vote on our bot at these bot sites:
