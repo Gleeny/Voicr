@@ -41,6 +41,7 @@ client.on('message', message => {
     if (!message.guild) return message.channel.send(":x: This bot can only be used in guilds. If you want to read more, please go to our Discordbots.org-page: https://discordbots.org/bot/COMING_SOON") // dms
 
     if (content.startsWith("v!enable")) { let format = "`v!enable <voice channel NAME or ID> | <role NAME, MENTION or ID>`"
+        if (!message.member.hasPermission("MANAGE_GUILD")) return message.channel.send(":x: You don't have permission!")
         let args = content.split(" ").slice(1).join(" ").split(" | ");
         console.log(args)
         if (args[0].length < 1) return message.channel.send(":x: No channel specified. Please use the following format: "  + format);
@@ -58,6 +59,7 @@ client.on('message', message => {
         saveVoiceRole(voiceChannel.id, role.id)
         return message.channel.send(":white_check_mark: I will now give all members that enter " + voiceChannel.name + " the " + role.name + "-role.")
     } else if (content.startsWith("v!disable")) { let format = "`v!disable <voice channel NAME or ID>`"
+        if (!message.member.hasPermission("MANAGE_GUILD")) return message.channel.send(":x: You don't have permission!")
         let args = content.split(" ").slice(1).join(" ");
         if (args.length < 1) return message.channel.send(":x: No channel specified. Please use the following format: "  + format);
         let voiceChannel = message.guild.channels.find('name', args);
