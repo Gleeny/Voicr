@@ -27,14 +27,14 @@ client.on('voiceStateUpdate', (oldMember, newMember) => {
     let oldVoiceRole = oldMember.guild.roles.get(oldVoiceRoleID);
 
     if (oldVoiceRole && !newVoiceRole) oldMember.removeRole(oldVoiceRole, "Left " + oldChannel.name);
-    if (oldVoiceRole && newVoiceRole && newMember.deaf == oldMember.deaf && oldMember.deaf == false) { oldMember.removeRole(oldVoiceRole, "Moved from " + oldChannel.name + " to " + newChannel.name); newMember.addRole(newVoiceRole, "Moved from " + oldChannel.name + " to " + newChannel.name); }
+    if (oldVoiceRole && newVoiceRole && newMember.deaf == oldMember.deaf && oldMember.deaf == false && (oldVoiceRole != newVoiceRole)) { oldMember.removeRole(oldVoiceRole, "Moved from " + oldChannel.name + " to " + newChannel.name); newMember.addRole(newVoiceRole, "Moved from " + oldChannel.name + " to " + newChannel.name); }
     if (!oldVoiceRole && newVoiceRole && !newMember.deaf) newMember.addRole(newVoiceRole, "Joined " + newChannel.name);
     if (oldChannelID == newChannelID && newMember.deaf && !oldMember.deaf) newMember.removeRole(oldVoiceRole, "Deafened");
     if (oldChannelID == newChannelID && !newMember.deaf && oldMember.deaf) newMember.addRole(newVoiceRole, "Undeafened");
 })
 
 client.on('message', message => {
-    let content = message.content.toLowerCase();
+    let content = message.content;
 
     if (message.author.bot) return;
     
