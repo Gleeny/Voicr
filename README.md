@@ -10,7 +10,11 @@
 1. Add the bot using [this](https://discordapp.com/oauth2/authorize?client_id=472842075310653447&permissions=268438528&scope=bot) link.
 2. Make a voice channel (for example Main Voice)
 3. Make a role (for example Connected to Main Voice)
-5. (Following the example) Type `v!enable Main Voice | Connected to Main Voice`.
+4. (Following the example) Type `v!enable Main Voice | Connected to Main Voice`.
+
+(Optional)
+5. Make a text channel (for example #main-voice-context)
+6. (Following the example) Let the role (Connected to Main Voice) talk in #main-voice-context)
 
 That's it!
 ** **
