@@ -12,7 +12,7 @@
 3. Make a role (for example Connected to Main Voice)
 4. (Following the example) Type `v!enable Main Voice | Connected to Main Voice`.
 
-(Optional)
+__Optional__
 5. Make a text channel (for example #main-voice-context)
 6. (Following the example) Let the role (Connected to Main Voice) talk in #main-voice-context)
 
