@@ -1,17 +1,30 @@
 const Discord = require('discord.js');
 const fs = require('fs');
+const DBL = require('dblapi.js');
+const Listcord = require('listcord');
 
 const client = new Discord.Client({ disableEveryone: true })
+const dbl = new DBL(require('./_TOKEN.js').DBL_TOKEN, client)
+const listcord = new Listcord.Client(require('./_TOKEN.js').LISTCORD_TOKEN)
 
 client.on('ready', () => {
     console.log("Ready!")
 
-    client.user.setActivity("v!info (" + voiceRoleGlobalCount() + " voice channels)", { type: "WATCHING" })
+    client.user.setActivity("v!info (" + voiceRoleGlobalCount() + " voice channels) [" + (client.shard.id == 0 ? "1" : client.shard.id) + "/" + client.shard.count + "]", { type: "WATCHING" })
     
     setInterval(() => {
-        client.user.setActivity("v!info (" + voiceRoleGlobalCount() + " voice channels)", { type: "WATCHING" })
+        client.user.setActivity("v!info (" + voiceRoleGlobalCount() + " voice channels) [" + (client.shard.id == 0 ? "1" : client.shard.id) + "/" + client.shard.count + "]", { type: "WATCHING" })
     }, 60000)
+
+    postStats(client)
+    setInterval(() => { postStats(client) }, 900000)
 })
+
+async function postStats(client) {
+    dbl.postStats(client.guilds.size, client.shard.id, client.shard.count).then().catch(console.log);
+    const counts = await client.shard.broadcastEval('this.guilds.size')
+    listcord.postStats(client.user.id, counts.reduce((prev, val) => prev + val, 0), client.shard.count).then().catch(console.log);
+}
 
 client.on('voiceStateUpdate', (oldMember, newMember) => {
     let newChannel = newMember.voiceChannel;
@@ -38,7 +51,7 @@ client.on('message', message => {
 
     if (message.author.bot) return;
     
-    if (!message.guild) return message.channel.send(":x: This bot can only be used in guilds. If you want to read more, please go to our Discordbots.org-page: https://discordbots.org/bot/COMING_SOON") // dms
+    if (!message.guild) return message.channel.send(":x: This bot can only be used in guilds. If you want to read more, please go to our Discordbots.org-page: https://discordbots.org/bot/472842075310653447") // dms
 
     if (content.startsWith("v!enable")) { let format = "`v!enable <voice channel NAME or ID> | <role NAME, MENTION or ID>`"
         if (!message.member.hasPermission("MANAGE_GUILD")) return message.channel.send(":x: You don't have permission!")
@@ -69,8 +82,8 @@ client.on('message', message => {
 
         saveVoiceRole(voiceChannel.id, undefined);
         return message.channel.send(":white_check_mark: I will no longer give a role to a member that enters " + voiceChannel.name);
-    } else if (content.startsWith("v!info")) {
-        return message.channel.send("**Please go to our Discordbots.org-page to read more about the bot: **https://discordbots.org/bot/COMING_SOON")
+    } else if (content.startsWith("v!info") || content.startsWith("v!help")) {
+        return message.channel.send("**Please go to our Discordbots.org-page to read more about the bot: **https://discordbots.org/bot/472842075310653447")
     }
 });
 
