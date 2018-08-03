@@ -4,6 +4,8 @@
   
 [![Discord Bots](https://discordbots.org/api/widget/status/472842075310653447.svg)](https://discordbots.org/bot/472842075310653447) [![Discord Bots](https://discordbots.org/api/widget/servers/472842075310653447.svg)](https://discordbots.org/bot/472842075310653447) [![Discord Bots](https://discordbots.org/api/widget/upvotes/472842075310653447.svg)](https://discordbots.org/bot/472842075310653447) [![Discord Bots](https://discordbots.org/api/widget/lib/472842075310653447.svg)](https://discordbots.org/bot/472842075310653447) [![Discord Bots](https://discordbots.org/api/widget/owner/472842075310653447.svg)](https://discordbots.org/bot/472842075310653447)
 
+[![Discord Bots](https://discordbots.org/api/widget/472842075310653447.svg)](https://discordbots.org/bot/472842075310653447) [![Listcord](https://nuggetbot.com/listcord/embed.png?id=472842075310653447)](https://listcord.com/bot/472842075310653447)
+
 </div>
 
 **Voicr** is a simple voice channel role system and can be set up in 2 simple steps, explained.
