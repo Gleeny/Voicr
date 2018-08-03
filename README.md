@@ -4,7 +4,7 @@
   
 [![Discord Bots](https://discordbots.org/api/widget/status/472842075310653447.svg)](https://discordbots.org/bot/472842075310653447) [![Discord Bots](https://discordbots.org/api/widget/servers/472842075310653447.svg)](https://discordbots.org/bot/472842075310653447) [![Discord Bots](https://discordbots.org/api/widget/upvotes/472842075310653447.svg)](https://discordbots.org/bot/472842075310653447) [![Discord Bots](https://discordbots.org/api/widget/lib/472842075310653447.svg)](https://discordbots.org/bot/472842075310653447) [![Discord Bots](https://discordbots.org/api/widget/owner/472842075310653447.svg)](https://discordbots.org/bot/472842075310653447)
 
-[![Discord Bots](https://discordbots.org/api/widget/472842075310653447.svg)](https://discordbots.org/bot/472842075310653447) [![Listcord](https://nuggetbot.com/listcord/embed.png?id=472842075310653447)](https://listcord.com/bot/472842075310653447)
+[![Discord Bots](https://discordbots.org/api/widget/472842075310653447.svg)](https://discordbots.org/bot/472842075310653447) [![Listcord](https://nuggetbot.com/listcord/embed.png?id=472842075310653447&datacolor=35383d&backgroundcolor=23272a&accentcolor=2c2f33&offlinecolor=43b581&onlinecolor=43b581&bottomcolor=7289da&datatextcolor=bababa&keytextcolor=737375)](https://listcord.com/bot/472842075310653447)
 
 </div>
 
