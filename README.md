@@ -29,7 +29,7 @@ There are currently one main purpose with extras:
 |:-------------------------------------------------------------------|:------------------------------------------------------|:---------------|
 | `v!enable <voice channel NAME or ID> \| <role NAME, MENTION or ID>` | Enable a voice channel so whenever a user joins it, it will give the role. | `MANAGE_GUILD` |
 | `v!disable <voice channel NAME or ID>`                             | Undo the enable-command. | `MANAGE_GUILD` |
-| `v!info`                                                           | Get information about the bot. |
+| `v!info` or `v!help`                                               | Get information about the bot. |
 
 ** **
 <big>Permissions</big>
