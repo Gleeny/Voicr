@@ -58,7 +58,7 @@ Since we can change our names on Discord whenever we want, you can find us on th
 <big>Vote for us</big>
 
 To support us free, please vote on our bot at these bot sites:
-- [DiscordBots.org](https://discordbots.org/bot/472842075310653447/vote) (main bot site)
+- [DiscordBots.org](https://discordbots.org/bot/472842075310653447) (main bot site)
 - [Listcord.com](https://listcord.com/bot/472842075310653447)
 
 I don't like money donations, but votes would mean a lot :)
