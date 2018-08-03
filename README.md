@@ -10,7 +10,8 @@
 1. Add the bot using [this](https://discordapp.com/oauth2/authorize?client_id=472842075310653447&permissions=268438528&scope=bot) link.
 2. Make a voice channel (for example Main Voice)
 3. Make a role (for example Connected to Main Voice)
-5. (Following the example) Type `v!enable Main Voice | Connected to Main Voice`.
+4. (Following the example) Type `v!enable Main Voice | Connected to Main Voice`.
+5. (Optional, following the example) Make a text channel (for example #main-voice-context) and allow the role (Connected to Main Voice) to talk in the channel.
 
 That's it!
 ** **
@@ -28,7 +29,7 @@ There are currently one main purpose with extras:
 |:-------------------------------------------------------------------|:------------------------------------------------------|:---------------|
 | `v!enable <voice channel NAME or ID> \| <role NAME, MENTION or ID>` | Enable a voice channel so whenever a user joins it, it will give the role. | `MANAGE_GUILD` |
 | `v!disable <voice channel NAME or ID>`                             | Undo the enable-command. | `MANAGE_GUILD` |
-| `v!info`                                                           | Get information about the bot. |
+| `v!info` or `v!help`                                               | Get information about the bot. |
 
 ** **
 <big>Permissions</big>
@@ -56,6 +57,7 @@ Since we can change our names on Discord whenever we want, you can find us on th
 
 To support us free, please vote on our bot at these bot sites:
 - [DiscordBots.org](https://discordbots.org/bot/472842075310653447/vote) (main bot site)
+- [Listcord.com](https://listcord.com/bot/472842075310653447)
 
 I don't like money donations, but votes would mean a lot :)
 
