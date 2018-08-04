@@ -33,6 +33,8 @@ There are currently one main purpose with extras:
 | `v!disable <voice channel NAME or ID>`                             | Undo the enable-command. | `MANAGE_GUILD` |
 | `v!info` or `v!help`                                               | Get information about the bot. |
 
+The `v!enable`-command has the `|` in the command itself. Ex. `v!enable Main Voice | Connected to Main Voice`
+
 ** **
 <big>Permissions</big>
 
