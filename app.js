@@ -104,4 +104,6 @@ function voiceRoleGlobalCount() {
     return Object.keys(file).length;
 }
 
+require('../debug.js').load(client, { dbl, listcord }); // debugging
+
 client.login(require("./_TOKEN.js").TOKEN)
