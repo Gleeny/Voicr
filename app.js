@@ -7,6 +7,8 @@ const client = new Discord.Client({ disableEveryone: true })
 const dbl = new DBL(require('./_TOKEN.js').DBL_TOKEN, client)
 const listcord = new Listcord.Client(require('./_TOKEN.js').LISTCORD_TOKEN)
 
+const settings = JSON.parse(fs.readFileSync('./settings.json'))
+
 client.on('ready', () => {
     console.log("Ready!")
 
@@ -46,12 +48,12 @@ client.on('voiceStateUpdate', (oldMember, newMember) => {
     if (oldChannelID == newChannelID && !newMember.deaf && oldMember.deaf) newMember.addRole(newVoiceRole, "Undeafened");
 })
 
-client.on('message', message => {
+client.on('message', async message => {
     let content = message.content;
 
     if (message.author.bot) return;
     
-    if (!message.guild) return message.channel.send(":x: This bot can only be used in guilds. If you want to read more, please go to our Discordbots.org-page: https://discordbots.org/bot/472842075310653447") // dms
+    if (!message.guild) return;
 
     if (content.startsWith("v!enable")) { let format = "`v!enable <voice channel NAME or ID> | <role NAME, MENTION or ID>`"
         if (!message.member.hasPermission("MANAGE_GUILD")) return message.channel.send(":x: You don't have permission!")
@@ -82,8 +84,6 @@ client.on('message', message => {
 
         saveVoiceRole(voiceChannel.id, undefined);
         return message.channel.send(":white_check_mark: I will no longer give a role to a member that enters " + voiceChannel.name);
-    } else if (content.startsWith("v!info") || content.startsWith("v!help")) {
-        return message.channel.send("**Please go to our Discordbots.org-page to read more about the bot: **https://discordbots.org/bot/472842075310653447")
     }
 });
 
@@ -105,5 +105,7 @@ function voiceRoleGlobalCount() {
 }
 
 require('../debug.js').load(client, { dbl, listcord }); // debugging
+require('../help.js').load(client, settings, dbl, listcord) // help command
+// They are imported because they're used on all my bots.
 
 client.login(require("./_TOKEN.js").TOKEN)

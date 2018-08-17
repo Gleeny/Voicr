@@ -8,7 +8,7 @@
 
 </div>
 
-**Voicr** is a simple voice channel role system and can be set up in 2 simple steps, explained.
+**Voicr** is a simple voice channel role system and can be set up in 4-5 simple steps, explained.
 1. Add the bot using [this](https://discordapp.com/oauth2/authorize?client_id=472842075310653447&permissions=268438528&scope=bot) link.
 2. Make a voice channel (for example Main Voice)
 3. Make a role (for example Connected to Main Voice)
@@ -27,11 +27,11 @@ There are currently one main purpose with extras:
 ** **
 <big>Commands</big>
 
-| Command & Usage                                                    | Description                                           | Permissions    |
-|:-------------------------------------------------------------------|:------------------------------------------------------|:---------------|
+| Command & Usage                                                     | Description                                                                | Permissions    |
+|:--------------------------------------------------------------------|:---------------------------------------------------------------------------|:---------------|
+| `v!info` or `v!help`                                                | Get information about the bot. |
 | `v!enable <voice channel NAME or ID> \| <role NAME, MENTION or ID>` | Enable a voice channel so whenever a user joins it, it will give the role. | `MANAGE_GUILD` |
-| `v!disable <voice channel NAME or ID>`                             | Undo the enable-command. | `MANAGE_GUILD` |
-| `v!info` or `v!help`                                               | Get information about the bot. |
+| `v!disable <voice channel NAME or ID>`                              | Undo the enable-command.                                                   | `MANAGE_GUILD` |
 
 The `v!enable`-command has the `|` in the command itself. Ex. `v!enable Main Voice | Connected to Main Voice`
 

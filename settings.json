@@ -1,0 +1,40 @@
+{
+    "commands": [
+        {
+            "command": "help",
+            "args": "",
+            "example": "",
+            "description": "Gives you this message."
+        },
+        {
+            "command": "enable",
+            "args": "<voice channel NAME or ID> | <role NAME, MENTION or ID>",
+            "example": "enable Main Voice | Connected to Main Voice",
+            "description": "Enable a voice channel so whenever a user joins it, it will give the role."
+        },
+        {
+            "command": "disable",
+            "args": "<voice channel NAME or ID>",
+            "example": "disable Main Voice",
+            "description": "Undo the enable-command."
+        }
+    ],
+    "contributors": [
+        {
+            "user": "Promise",
+            "userID": "110090225929191424",
+            "role": "Main Developer and Designer"
+        },
+        {
+            "user": "GamesForDays",
+            "userID": "332209233577771008",
+            "role": "Helper and Beta Tester"
+        }
+    ],
+    "prefix": "v!",
+    "embedColor": {
+        "ok": 4437377,
+        "err": 15746887,
+        "warn": 16426522
+    }
+}
