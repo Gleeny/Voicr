@@ -1,11 +1,9 @@
 const Discord = require('discord.js');
 const fs = require('fs');
 const DBL = require('dblapi.js');
-const Listcord = require('listcord');
 
 const client = new Discord.Client({ disableEveryone: true })
 const dbl = new DBL(require('./_TOKEN.js').DBL_TOKEN, client)
-const listcord = new Listcord.Client(require('./_TOKEN.js').LISTCORD_TOKEN)
 
 const settings = JSON.parse(fs.readFileSync('./settings.json'))
 
@@ -24,8 +22,6 @@ client.on('ready', () => {
 
 async function postStats(client) {
     dbl.postStats(client.guilds.size, client.shard.id, client.shard.count).then().catch(console.log);
-    const counts = await client.shard.broadcastEval('this.guilds.size')
-    listcord.postStats(client.user.id, counts.reduce((prev, val) => prev + val, 0), client.shard.count).then().catch(console.log);
 }
 
 client.on('voiceStateUpdate', (oldMember, newMember) => {
@@ -104,8 +100,8 @@ function voiceRoleGlobalCount() {
     return Object.keys(file).length;
 }
 
-require('../debug.js').load(client, { dbl, listcord }); // debugging
-require('../help.js').load(client, settings, dbl, listcord) // help command
+require('../debug.js').load(client, { dbl}); // debugging
+require('../help.js').load(client, settings, dbl) // help command
 // They are imported because they're used on all my bots.
 
 client.login(require("./_TOKEN.js").TOKEN)
