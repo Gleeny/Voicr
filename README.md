@@ -78,4 +78,9 @@ Any other questions can go to our [support server](https://discord.gg/JbHX5U3).
 
 ** **
 
-[![Discord Bots](https://discordbots.org/api/widget/467377486141980682.svg)](https://discordbots.org/bot/countr) [![Discord Bots](https://discordbots.org/api/widget/472842075310653447.svg)](https://discordbots.org/bot/472842075310653447) [![Discord Bots](https://discordbots.org/api/widget/475041313515896873.svg)](https://discordbots.org/bot/475041313515896873)
+<div align="center">
+
+[![Discord Bots](https://discordbots.org/api/widget/467377486141980682.svg)](https://discordbots.org/bot/countr)
+[![Discord Bots](https://discordbots.org/api/widget/475041313515896873.svg)](https://discordbots.org/bot/475041313515896873)
+
+</div>
