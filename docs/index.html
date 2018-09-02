@@ -1,0 +1,104 @@
+---
+layout: page
+---
+
+<!-- SEARCH ENGINE METADATA -->
+<meta name="description" content="A bot that can give you a role when you enter a specific voice channel. (giving the opportunity to link it with a text channel)">
+<!-- SEARCH ENGINE METADATA ended -->
+
+<!-- METADATA FOR DISCORD -->
+<meta name="theme-color" content="#00843b">
+<meta property="og:site_name" value='Gleeny "Promise" | Personal Website'>
+<meta property="og:title" content='Voicr'>
+<meta property="og:url" content='https://gleeny.github.io'>
+<meta property="og:description" content="A bot that can give you a role when you enter a specific voice channel. (giving the opportunity to link it with a text channel)">
+<meta property="og:image" content="https://images.discordapp.net/avatars/472842075310653447/8df42b064e05c11e78b3d32655a31709.png?size=512">
+<!-- METADATA FOR DISCORD ended -->
+
+<!-- METADATA FOR TWITTER -->
+<meta name="twitter:card" value="summary">
+<meta name="twitter:title" value='Gleeny "Promise" - Voicr'>
+<meta name="twitter:description" content="A bot that can give you a role when you enter a specific voice channel. (giving the opportunity to link it with a text channel)">
+<meta name="twitter:image" content="https://images.discordapp.net/avatars/472842075310653447/8df42b064e05c11e78b3d32655a31709.png?size=512">
+<!-- METADATA FOR TWITTER ended -->
+        
+<a href="http://discordbots.org/bot/472842075310653447"><img src="https://discordbots.org/api/widget/472842075310653447.svg"></a>
+        
+<p><b>Voicr</b> is a simple voice channel role system and can be set up in 4-5 simple steps, explained.<ol>
+    <li>Add the bot using <a href="https://discordapp.com/oauth2/authorize?client_id=472842075310653447&permissions=268438528&scope=bot">this</a> link.</li>
+    <li>Make a voice channel (for example Main Voice), or use an existing channel.</li>
+    <li>Make a role (for example Connected to Main Voice), or use an existing role.</li>
+    <li>(Following the example) Type <code>v!enable Main Voice | Connected to Main Voice</code>.</li>
+    <li>(Optional, following the example) Make a text channel (for example #main-voice-context), or use an existing channel and allow the role (Connected to Main Voice) to talk in the channel.</li>
+</ol>
+        
+That's it!
+<hr />
+<p><b>Purpose</b>
+        
+<p>There are different purposes:<ul>
+    <li>Guild administrators can restrict users in a voice channel to talk in a text channel.</li>
+    <li>Prevents the main chat to be flooded with random sh1t connected to the voice channel.</li>
+</ul>
+<hr />
+<p><b>Commands</b>
+        
+<p id="commands">Loading commands from GitHub...</p>
+
+<hr />
+<p><b>Permissions</b>
+<p>If you're super pecky about giving bots permissions, read this first!
+        
+<ul>
+	<li>Read Messages<ul>
+		<li>A basic permission that you should allow everyone to have. It needs to look for commands.</li></ul></li>
+	<li>Send Messages<ul>
+		<li>Another basic permission. It requires to respond to the commands.</li></ul></li>
+    <li>Manage Roles<ul>
+        <li>It needs to give the role to the user. Duh.</li></ul></li>
+</ul>
+
+<hr />
+<p><b>Contributors</b>
+        
+<p id="contributors">Loading contributors from GitHub...</p>
+        
+<hr />
+<p><b>Keep in mind!</b></p>
+<ul>
+    <li>You need to be undeafened to have the role.</li>
+	<li>The only information we store in our systems are:<ul>
+		<li>The voice channel ID</li>
+		<li>The role ID</li>
+		<li>Global voice channels (for the activity of the bot)</li>
+	<li>By using our bot you also agree that changes can be made and downtime can occour.</li>
+</ul>
+
+<script>
+$.getJSON("https://raw.githubusercontent.com/Gleeny/Voicr/master/settings.json", function(settings) {
+  let html = '<table><thead><tr><th style="text-align:left;">Command &amp; Usage</th><th style="text-align:left;">Description</th></tr></thead><tbody>';
+    
+  function formatCommand(command, index) {
+      html = html + '<tr><td style="text-align:left;"><code>' + settings.prefix + command.command + (command.args ? " " + command.args : "") + "</code></td>" + '<td style="text-align:left;">' + command.description + "</td></tr>";
+  }
+  
+  settings.commands.forEach(formatCommand);
+  
+  html = html + '</tbody></table>';
+  document.getElementById("commands").innerHTML = html;
+  
+  // CONTRIBUTORS
+  html = '<ul>';
+    
+  function formatContributor(contributor, index) {
+      html = html + '<li><code>' + contributor.role + '</code> ' + contributor.user + ' (' + contributor.userID + ')</li>';
+  }
+  
+  settings.contributors.forEach(formatContributor);
+  
+  html = html + '</ul>';
+  document.getElementById("contributors").innerHTML = html;
+})
+
+
+</script>
