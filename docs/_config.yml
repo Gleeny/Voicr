@@ -18,12 +18,12 @@ home: "https://gleeny.github.io" # custom
 email: "gleeny@cyberservices.com"
 description: >- # this means to ignore newlines until "baseurl:"
   Voicr, a bot that can give you a role when you enter a specific voice channel. (giving the opportunity to link it with a text channel)
-baseurl: "/Voicr" # the subpath of your site, e.g. /blog
+baseurl: "/voicr" # the subpath of your site, e.g. /blog
 url: "https://gleeny.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: GleenyPromise
 github_username:  Gleeny
 
-repository: "Gleeny/Voicr"
+repository: "Gleeny/voicr"
 
 # Build settings
 plugins:
@@ -38,11 +38,11 @@ header_pages: # idk where its used
 
 navpages: # custom
   - title: Countr
-    link: "https://gleeny.github.io/Countr"
+    link: "https://gleeny.github.io/countr"
   - title: Voicr
-    link: "https://gleeny.github.io/Voicr"
+    link: "https://gleeny.github.io/voicr"
   - title: Nevrevr
-    link: "https://gleeny.github.io/Nevrevr"
+    link: "https://gleeny.github.io/nevrevr"
   - title: "Support Server"
     link: "https://gleeny.page.link/discord"
   - title: "GitHub"
