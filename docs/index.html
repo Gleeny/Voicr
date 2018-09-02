@@ -80,11 +80,7 @@ $.getJSON("https://raw.githubusercontent.com/Gleeny/Voicr/master/settings.json",
   let html = '<table><thead><tr><th style="text-align:left;">Command &amp; Usage</th><th style="text-align:left;">Description</th></tr></thead><tbody>';
     
   function formatCommand(command, index) {
-      if (command.args) {
-          let args = command.args;
-        while (args.includes("<") || args.includes(">")) args = args.replace("<", "&lt;").replace(">", "&gt;");
-      }
-      html = html + '<tr><td style="text-align:left;"><code>' + settings.prefix + command.command + (command.args ? (command.command == "" ? "" : " ") + args : "") + "</code></td>" + '<td style="text-align:left;">' + command.description + "</td></tr>";
+    html = html + '<tr><td style="text-align:left;"><code>' + settings.prefix + command.command + (command.args ? (command.command == "" ? "" : " ") + command.args.replace(/</g, "&lt;").replace(/>/g, "&gt;") : "") + "</code></td>" + '<td style="text-align:left;">' + command.description + "</td></tr>";
   }
   
   settings.commands.forEach(formatCommand);
