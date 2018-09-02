@@ -43,10 +43,12 @@ navpages: # custom
     link: "https://gleeny.github.io/voicr"
   - title: Nevrevr
     link: "https://gleeny.github.io/nevrevr"
-  - title: "Support Server"
+  - title: "Discord"
     link: "https://gleeny.page.link/discord"
   - title: "GitHub"
     link: "https://github.com/Gleeny"
+  - title: "Twitter"
+    link: "https://twitter.com/GleenyPromise"
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
