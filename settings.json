@@ -2,9 +2,15 @@
     "commands": [
         {
             "command": "help",
+            "args": "[-dm]",
+            "example": "help -dm",
+            "description": "Gives you this message. If you use '-dm', it sends you in DMs."
+        },
+        {
+            "command": "ping",
             "args": "",
             "example": "",
-            "description": "Gives you this message."
+            "description": "Gives you the bot's ping."
         },
         {
             "command": "enable",
