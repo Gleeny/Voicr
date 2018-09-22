@@ -81,6 +81,8 @@ client.on('message', async message => {
         saveVoiceRole(voiceChannel.id, undefined);
         return message.channel.send(":white_check_mark: I will no longer give a role to a member that enters " + voiceChannel.name);
     }
+    
+    if (await require("../global.js").command(client, settings, dbl, message)) return; // global help command onall my bots.
 });
 
 function saveVoiceRole(voice, role) {
@@ -101,7 +103,6 @@ function voiceRoleGlobalCount() {
 }
 
 require('../debug.js').load(client, { dbl}); // debugging
-require('../help.js').load(client, settings, dbl) // help command
 // They are imported because they're used on all my bots.
 
 client.login(require("./_TOKEN.js").TOKEN)

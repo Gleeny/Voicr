@@ -4,7 +4,7 @@
             "command": "help",
             "args": "[-dm]",
             "example": "help -dm",
-            "description": "Gives you this message. If you use '-dm', it sends you in DMs."
+            "description": "Gives you information about the bot. If you use '-dm', it sends to you in DMs."
         },
         {
             "command": "ping",
