@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const fs = require('fs');
 const DBL = require('dblapi.js');
+const BLAPI = require("blapi")
 
 const client = new Discord.Client({ disableEveryone: true })
 const dbl = new DBL(require('./_TOKEN.js').DBL_TOKEN, client)
@@ -8,21 +9,15 @@ const dbl = new DBL(require('./_TOKEN.js').DBL_TOKEN, client)
 const settings = JSON.parse(fs.readFileSync('./settings.json'))
 
 client.on('ready', () => {
-    console.log("Ready!")
-
     client.user.setActivity("v!info (" + voiceRoleGlobalCount() + " voice channels) [" + (client.shard.id == 0 ? "1" : client.shard.id) + "/" + client.shard.count + "]", { type: "WATCHING" })
     
     setInterval(() => {
         client.user.setActivity("v!info (" + voiceRoleGlobalCount() + " voice channels) [" + (client.shard.id == 0 ? "1" : client.shard.id) + "/" + client.shard.count + "]", { type: "WATCHING" })
     }, 60000)
-
-    postStats(client)
-    setInterval(() => { postStats(client) }, 900000)
+    
+    // BLAPI.manualPost(server_count, client.user.id, require("./_TOKEN.js").BLAPI_TOKENS)
+    BLAPI.handle(client, require("./_TOKEN.js").BLAPI_TOKENS, 1)
 })
-
-async function postStats(client) {
-    dbl.postStats(client.guilds.size, client.shard.id, client.shard.count).then().catch(console.log);
-}
 
 client.on('voiceStateUpdate', (oldMember, newMember) => {
     let newChannel = newMember.voiceChannel;
@@ -62,7 +57,7 @@ client.on('message', async message => {
         if (!voiceChannel) return message.channel.send(":x: Channel does not exist. Please use the following format: "  + format)
         if (voiceChannel.type != "voice") return message.channel.send(":x: That is not a voice channel. Please use the following format: "  + format)
 
-        let role = message.guild.roles.find('name', args[1]);
+        let role = message.guild.roles.find(r => r.name == args[1]);
         if (!role) role = message.guild.roles.get(args[1]);
         if (!role) role = message.guild.roles.get(args[1].replace("<@&", "").replace(">", ""))
         if (!role) return message.channel.send(":x: Role does not exist. Please use the following format: "  + format)

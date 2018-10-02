@@ -4,7 +4,7 @@
   "description": "A bot that can give you a role when you enter a specific voice channel. (giving the opportunity to link it with a text channel)",
   "main": "app.js",
   "dependencies": {
-    "blapi": "^0.4.3",
+    "blapi": "^0.4.4",
     "bufferutil": "^4.0.0",
     "dblapi.js": "^2.2.0",
     "discord.js": "^11.4.2",
