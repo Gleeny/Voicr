@@ -1,3 +1,5 @@
-/_*
-node_modules/
-jspm_packages/
+.env
+shrinkwrap.yaml
+.glitch-assets
+*.tgz
+app

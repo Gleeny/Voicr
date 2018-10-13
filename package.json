@@ -8,13 +8,20 @@
     "bufferutil": "^4.0.0",
     "dblapi.js": "^2.2.0",
     "discord.js": "^11.4.2",
-    "erlpack": "github:hammerandchisel/erlpack",
+    "erlpack": "^0.1.2",
     "fs": "0.0.2",
-    "uws": "^99.0.0"
+    "uws": "^99.0.0",
+    "mongoose": "^5.3.3",
+    "express": "^4.16.4",
+    "require-from-url": "^3.1.2"
+  },
+  "engines": {
+    "node": "8.4.0"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node sharding.js"
   },
   "repository": {
     "type": "git",
